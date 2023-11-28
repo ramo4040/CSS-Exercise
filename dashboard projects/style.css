@@ -1,0 +1,312 @@
+:root {
+    --p-color: #ffffff;
+    --s-color: #506CAE;
+    --light-s-color: #c4d5ff4a;
+    --border-color: #b9b9b942;
+}
+
+body {
+    height: 100vh;
+    background: #F4F8FB;
+    font-family: system-ui;
+    display: grid;
+    place-content: center;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    box-shadow: 0 0 5rem -3rem var(--s-color);
+    overflow: hidden;
+    border-radius: 1rem;
+    width: 70rem;
+    height: 50rem;
+}
+
+
+nav {
+
+    display: grid;
+    grid-template-rows: 4rem 1fr 5rem;
+    gap: 2.3rem;
+
+    background-color: var(--p-color);
+    border-right: 1px solid var(--border-color);
+    padding: 2rem 2rem 0 2rem;
+
+    &>a {
+        font-weight: bolder;
+        font-size: 2.2rem;
+    }
+
+    & ul {
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+
+        & i {
+            transition: .4s;
+            padding-right: .7rem;
+        }
+
+        & li {
+            padding: .3rem;
+            border-radius: 100vmax;
+            background:
+                linear-gradient(var(--light-s-color) 0 0) 0% 0% / var(--w, 0%) no-repeat,
+                linear-gradient(#4294ff 0 0) var(--pp, 101%) 0% / var(--w2, 0%) no-repeat;
+            transition: .4s;
+
+            &:hover {
+                --w: 100%;
+                --w2: 17%;
+                --pp: 0%;
+            }
+
+            &:hover i {
+                color: #ffffff;
+            }
+
+        }
+    }
+
+    & .profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        font-weight: 500;
+        border-top: 1px solid var(--border-color);
+        margin-inline: -2rem;
+
+        & img {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+        }
+
+        & i {
+            background: var(--light-s-color);
+            border-radius: 50%;
+            padding-inline: 4px;
+        }
+
+    }
+
+
+}
+
+section {
+    background-color: var(--p-color);
+    display: grid;
+    grid-template-rows: 4rem 1fr;
+    gap: 2rem;
+    padding: 2rem 2rem 2rem 3rem;
+
+}
+
+menu {
+    display: grid;
+    grid-template-columns: 1fr 12rem;
+    align-items: center;
+
+
+    & .search-input {
+        position: relative;
+
+        & input {
+            border: 1px solid var(--border-color);
+            border-radius: 100vmax;
+            padding: .5rem 3.5rem;
+        }
+
+        & i {
+            position: absolute;
+            padding: .5rem 1.5rem;
+        }
+    }
+
+    & .status {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & h1 {
+            font-size: 1.8rem;
+        }
+
+        & i {
+            font-size: 1.2rem;
+        }
+
+    }
+}
+
+.section-content {
+    display: flex;
+    gap: 4rem;
+}
+
+article {
+    display: grid;
+
+    & .folder-card {
+        display: grid;
+        grid-template-columns: 9rem 9rem;
+        grid-auto-rows: 9rem;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        & div {
+            background: var(--light-s-color);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            position: relative;
+
+            &:last-child:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: .5rem;
+                aspect-ratio: 1/1;
+                background-color: red;
+                outline: 5px solid white;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    & .project-card {
+        display: grid;
+        gap: .5rem;
+        grid-template-columns: 13rem 13rem;
+        grid-auto-rows: 7rem;
+        margin-top: 1rem;
+
+        &>div {
+            background: var(--light-s-color);
+            display: flex;
+            gap: .5rem;
+            padding: 1.5rem;
+            border-radius: .5rem;
+
+            & a {
+                background-color: #fff;
+                display: inline-block;
+                width: 2.5rem;
+                height: 2.5rem;
+                line-height: 2.5rem;
+                text-align: center;
+                border-radius: 50%;
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+
+            &:first-child a {
+                color: #985bff;
+            }
+
+            &:nth-child(2) a {
+                color: #CC5A98;
+            }
+
+            &:nth-child(3) a {
+                color: #97C23A;
+            }
+
+            & .progress {
+                margin-top: .8rem;
+                height: 5px;
+                width: 7rem;
+                border-radius: 100vmax;
+                background-color: var(--p-color);
+                overflow: hidden;
+
+                & span {
+                    display: block;
+                    width: var(--p-width);
+                    height: 100%;
+                    background: linear-gradient(90deg, rgb(35 104 195) 32%, rgb(66 148 255) 93%);
+
+                }
+            }
+        }
+
+        &>:last-child {
+            background-color: transparent;
+            border: 1px solid var(--border-color);
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            color: grey;
+
+            & i {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+aside {
+    width: 100%;
+
+    & .tasks {
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: .5rem;
+        display: grid;
+        gap: .5rem;
+        background: var(--light-s-color);
+
+        & input {
+            width: 1.7rem;
+            height: 1.7rem;
+            margin-right: .5rem;
+            background-color: white;
+            border-radius: 50%;
+            vertical-align: middle;
+            border: 1px solid #ddd;
+            appearance: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+
+            &:checked {
+                background-color: #287ff2;
+            }
+        }
+
+        & > div {
+            background-color: var(--p-color);
+            padding: 1rem;
+            
+            & .info{
+                display: flex;
+                justify-content: space-between;
+                padding-left:2.2rem ;
+            }
+
+            & .badge{
+                border-radius: 100vmax;
+                height: min-content;
+                padding-inline: .6rem;
+                color: #fff;
+            }
+            & .Design{
+                background-color: #ff6161;
+            }
+            & .Developement{
+                background-color: #985bff;
+            }
+            & .Marketing{
+                background-color: #97C23A;
+            }
+            
+        }
+    }
+}
+
