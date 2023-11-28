@@ -1,0 +1,124 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #292e5a;
+}
+
+body {
+    height: 100vh;
+    background: #F2F4FB;
+    font-family: sans-serif;
+    display: flex;
+
+}
+
+main {
+    display: grid;
+    gap: 1.5rem;
+    margin: auto;
+    width: 22rem;
+    height: 33rem;
+    background-color: #fff;
+    border-radius: 2rem;
+    position: relative;
+    padding: 2.3rem;
+    box-shadow: 0 0 5rem -4rem #000;
+
+    &::after {
+        content: '';
+        z-index: -1;
+        width: 28rem;
+        height: 33rem;
+        background-color: #a4b7f7a8;
+        position: absolute;
+        top: -3rem;
+        left: -3rem;
+        border-radius: 2rem;
+
+    }
+}
+
+header p {
+    margin-top: 10px;
+}
+
+section {
+    display: grid;
+    gap: .8rem;
+
+    >a {
+        text-decoration: none;
+        padding: .8rem 1rem;
+        text-align: center;
+        background: linear-gradient(139deg, rgba(97, 244, 146, 1) 16%, rgb(67, 227, 255) 96%);
+        border-radius: 6px;
+        font-weight: bold;
+    }
+}
+
+.info p {
+    display: inline;
+}
+
+.info i {
+    background-color: #ebeffa;
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.info2 {
+    background: #ebeffa;
+    border-radius: 6px;
+    padding: 1rem;
+    & b {
+        font-size: 14px;
+    }
+}
+
+.search {
+    display: flex;
+    gap: .3rem;
+    margin-top: 20px;
+}
+
+
+input[type="submit"] {
+    padding: .7rem 1.3rem;
+    background-color: #fff;
+    border: 0;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+input[type="search"] {
+    padding: .7rem 2rem;
+    position: relative;
+    background: none;
+    border: 1px solid #A4B8F7;
+    border-radius: 6px;
+    outline: 0;
+    font-weight: bold;
+    width: 100%;
+}
+
+.input i {
+    padding: .7rem;
+    position: absolute;
+}
+
+footer a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(139deg, rgba(164, 184, 247, 1) 16%, rgba(180, 172, 251, 1) 96%);
+    padding: 1rem;
+    border-radius: .5rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: .9rem;
+}

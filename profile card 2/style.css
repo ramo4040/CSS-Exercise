@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: #C5CEDD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    color: #161D3F;
+
+}
+
+main {
+    background-image: url(bbblurry.svg);
+    background-size: cover;
+    position: relative;
+    height: 20rem;
+    width: 18rem;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+main::after {
+    content: '';
+    position: absolute;
+    inset: 0; 
+    margin: auto;
+    height: 24rem;
+    width: 15rem;
+    border-radius: 1rem;
+    z-index: -1;
+    background-color: #161D3F;
+}
+
+.burger-menu {
+    margin-left: auto;
+}
+
+section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+section img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    outline: 10px solid #e9e7e7;
+}
+
+.content h3 {
+    margin-bottom: .6rem;
+}
+
+button {
+    border: 0;
+    background-color: #161D3F;
+    color: #fff;
+    border-radius: 100vmax;
+    padding: .6rem 1.4rem;
+    cursor: pointer;
+}
+
+
+/* .loca{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */

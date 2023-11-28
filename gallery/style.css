@@ -1,0 +1,119 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+    padding: 0;
+    color: #212236;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  
+body {
+    height: 100vh;
+    background: #ced2e0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+}
+
+main{
+    margin: auto;
+    position: relative;
+    background-color: #fff;
+    width: 80%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5rem -4rem;
+    padding: 2.5rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: #DEE2E7;
+        width: 22rem;
+        height: 22rem;
+        border-radius: 50%;
+        left: 15rem;
+        bottom: -8rem;
+        z-index: -1;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: #DEE2E7;
+        width: 17rem;
+        min-height: 17rem;
+        border-radius: 50%;
+        right: 17rem;
+        top: -8rem;
+        z-index: -1;
+    }
+}
+
+header{
+
+    & ul{
+        margin: 2rem 3rem;
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+    }
+    & a {
+        text-decoration: none;
+    }
+}
+
+section{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    flex-basis: 20rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: .3rem;
+ 
+}
+.card > div:not(.info){
+    border-radius: 1.2rem;
+    background-image: url(https://pixelz.cc/wp-content/uploads/2018/11/godafoss-waterfall-winter-iceland-uhd-4k-wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.img1{
+    height: 14rem;
+    flex-basis: 100%;
+}
+
+.img2 , .img3 , .img4{
+    flex-basis: 30%;
+    height: 5rem;
+}
+.info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
