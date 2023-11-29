@@ -1,0 +1,63 @@
+body {
+    height: 100vh;
+    background: #DDE3E6;
+    font-family: system-ui;
+    display: flex;
+}
+
+main {
+    margin: auto;
+    background: #738B9B;
+    box-shadow: 0 0 4rem #738b9b9c;
+    width: 22rem;
+    height: 37rem;
+
+    display: grid;
+    grid-template-rows: 11rem 1fr;
+    grid-template-columns: 100%;
+
+    & .terminal{
+        padding: 1.5rem;
+        color: #fff;
+        align-self: end;
+        justify-self: end;
+        & h1{
+            text-align: right;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.buttons{
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(4,1fr);
+    background: #d7dbdd;
+    
+    & div{
+        background: #fff;
+        color: #738B9B;
+        transition: .3s;
+        font-size: 1.5rem;
+    
+        display: grid;
+        place-content: center;
+        
+        &:last-child{
+            background: #FC6464;
+            color: #fff;
+        }
+
+        &:hover{
+            scale: 1.1;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1) ;
+            &:last-child{
+                box-shadow: 0 0 20px #fc6464af;
+            }
+        }
+    }
+
+    & .main-buttons{
+        background: #e4e9ec;
+    }
+}
