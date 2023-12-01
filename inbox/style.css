@@ -1,0 +1,60 @@
+body {
+    height: 100vh;
+    background: #393940;
+    font-family: system-ui;
+    display: flex;
+}
+
+main {
+    margin: auto;
+    background: #303037;
+    width: 45rem;
+    height: 18rem;
+    border-radius: 2rem;
+    padding: .7rem;
+
+    display: grid;
+    gap: 2rem;
+    grid-template: 
+        "img content"1fr/ 12rem 1fr
+    ;
+}
+
+.img{
+    background-image: url(cafe.png);
+    background-size: cover;
+    border-radius: 1rem 0 0 1rem;
+    overflow: hidden;
+}
+section{
+    display: grid;
+    align-content: center;
+    gap: 1.5rem;
+    color: #fff;
+    & .input-group{
+        display: flex;
+        gap: 1rem;
+        & input{
+            background: transparent;
+            border: 1px solid grey;
+            outline: 0;
+            height: 3.2rem;
+            flex-basis: 18rem;
+            border-radius: .4rem;
+            padding: 0 1rem;
+            &::placeholder{
+                color: #ffffffa8;
+            }
+        }
+        & a{
+            display: flex;
+            align-items: center;
+            padding: 0 1.3rem;
+            border-radius: .4rem;
+            background: #93C814;
+            color: #000;
+            font-weight: 500;
+        }
+    }
+    
+}
