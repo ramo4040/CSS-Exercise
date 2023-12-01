@@ -27,4 +27,4 @@ Happy coding! If you have any questions or need assistance, feel free to open an
 <img src='dashboard projects/1.png' width='410'> <img src='multipl card/1.png' width='410'>
 <img src='search focus animation/1.png' width='410'> <img src='pop up/1.png' width='410'>
 <img src='stories/1.png' width='410'> <img src='calculator/1.png' width='410'> 
-<img src='invoices/1.png' width='410'> 
+<img src='invoices/1.png' width='410'> <img src='inbox/2.png' width='410'> 
