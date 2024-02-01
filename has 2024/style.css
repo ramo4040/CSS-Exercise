@@ -1,0 +1,63 @@
+@import url(var.css);
+
+
+body {
+    height: 100vh;
+    background: var(--gradient-5);
+    font-family: system-ui;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+
+    --li-width: 5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff70;
+    padding: var(--size-3);
+    border-radius: var(--radius-round);
+    border: 3px solid #fff;
+
+    height: 6rem;
+
+    img {
+        max-width: 100%;
+    }
+
+    li{
+        width: var(--li-width);
+        aspect-ratio: 1;
+        cursor: pointer;
+        padding: var(--size-1);
+    }
+
+     li,
+     img {
+      transition: 300ms ease-out;
+    }
+    
+     li:hover {
+      width: calc(var(--li-width) * 1.7);
+    }
+    
+     li:hover img {
+      transform: translateY(-30%);
+    }
+    
+     li:hover + li,
+     li:has(+ li:hover) {
+        width: calc(var(--li-width) * 1.2);
+
+    }
+    
+     li:hover + li img,
+     li:has(+ li:hover) img {
+        transform: translateY(-15%);
+    }
+
+
+}
