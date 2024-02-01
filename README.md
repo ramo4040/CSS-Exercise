@@ -29,4 +29,5 @@ Happy coding! If you have any questions or need assistance, feel free to open an
 <img src='stories/1.png' width='410'> <img src='calculator/1.png' width='410'> 
 <img src='invoices/1.png' width='410'> <img src='inbox/2.png' width='410'> 
 <img src='shopping card/1.png' width='410'> <img src='messages/1.png' width='410'> 
+<img src='has 2024/1.png' width='410'> 
 
